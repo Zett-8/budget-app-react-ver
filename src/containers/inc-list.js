@@ -16,8 +16,8 @@ class ItemList extends React.Component{
                         <div className="right clearfix">
                             <div className="item__value">+ {this.formatNum(value.value)}</div>
                             <div className="item__delete">
-                                <button className="item__delete--btn">
-                                    <i className="ion-ios-close-outline" onClick={() => this.props.DelItem(value.id)}></i>
+                                <button className="item__delete--btn" onClick={() => this.props.DelItem(value.id)}>
+                                    <i className="ion-ios-close-outline"></i>
                                 </button>
                             </div>
                         </div>
