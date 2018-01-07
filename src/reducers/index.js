@@ -1,7 +1,8 @@
+import { DEL_ITEM, ADD_TO_LIST } from "../actions";
 
 export default function items(state=[], action) {
     switch (action.type) {
-        case 'ADD_TO_LIST':
+        case ADD_TO_LIST:
             return [...state, {
                 id: action.id,
                 type: action.typ,
@@ -9,7 +10,7 @@ export default function items(state=[], action) {
                 value: action.value
             }];
             
-        case 'DEL_ITEM':
+        case DEL_ITEM:
             return state.filter(value => {
                 if(value.id === action.payload) {
                     return null;
